@@ -43,8 +43,8 @@ syntax keyword makeGreen   DONE
 syntax keyword makeGreen   PASS
 highlight link makeGreen   Debug
 
-syntax match columnSep     /\v[|+]/
-highlight link columnSep   Todo
+"syntax match columnSep     /\v[|+]/
+"highlight link columnSep   Todo
 
 set cc=
 
