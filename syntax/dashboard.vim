@@ -10,7 +10,7 @@
 syntax keyword makeYellow  IN_P
 syntax keyword makeYellow  REDO
 syntax keyword makeYellow  WAIVE
-syntax keyword makeGreen   PASSW
+syntax keyword makeYellow  NEXT
 highlight link makeYellow  CursorLineNr
 
 syntax keyword makeRed     FAIL
@@ -28,7 +28,6 @@ syntax match   makeRed     /\v \zs[1-9]\d{2,}mV\ze /
 highlight link makeRed     Error
 
 syntax keyword makePink    TODO
-syntax keyword makePink    NEXT
 highlight link makePink    DiffChange
 
 syntax match   makeBlock   /\V{{{1 \v\zs[^ ]+/
@@ -37,6 +36,7 @@ highlight link makeBlock   Identifier
 syntax keyword makeBlue    HERE
 highlight link makeBlue    MatchParen
 
+syntax keyword makeGreen   PASSW
 syntax keyword makeGreen   37EISS
 syntax keyword makeGreen   DEFISS
 syntax match   makeGreen   /\v.*YES\ze /
