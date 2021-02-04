@@ -16,7 +16,7 @@ syntax keyword makeNext  REDO
 syntax keyword makeNext  WAIVE
 syntax keyword makeNext  MATT
 syntax keyword makeNext  MIKE
-highlight link makeNext  CursorLineNr
+highlight link makeNext  DiffChange
 
 syntax keyword makeFail  FAIL
 syntax keyword makeFail  NO
@@ -29,9 +29,6 @@ syntax match   makeFail  /\v \zs[1-9]\d{2,}mV\ze /
 highlight link makeFail  Error
 
 syntax keyword makePink  TODO
-highlight link makePink  DiffChange
-
-"syntax match columnSep     /\v[|+]/
-"highlight link columnSep   Todo
+highlight link makePink  CursorLineNr
 
 let b:current_syntax = "dashboard"
