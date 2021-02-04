@@ -2,51 +2,36 @@
     "finish
 "endif
 
-" These colors assume carvedwood colorscheme
-"syntax match   makeGray    /^\v[-+]+$/
-"syntax match   makeGray    /^\V{{{1\v [^ ]+ +\zs.*$/
-"highlight link makeGray    Comment
+" :colorscheme default
 
-syntax keyword makeYellow  IN_P
-syntax keyword makeYellow  REDO
-syntax keyword makeYellow  WAIVE
-syntax keyword makeYellow  NEXT
-highlight link makeYellow  CursorLineNr
+syntax keyword makePass  DONE
+syntax keyword makePass  PASSW
+syntax match   makePass  /\v.*YES\ze /
+syntax keyword makePass  PASS
+highlight link makePass  MoreMsg
 
-syntax keyword makeRed     FAIL
-syntax keyword makeRed     EMET
-syntax keyword makeRed     MATT
-syntax keyword makeRed     MIKE
-syntax keyword makeRed     NO
-"syntax keyword makeRed     /\Vpnr-run/
-syntax match   makeRed     /\v%>187c [^ ]*\zsX\ze[^ ]* /
-syntax match   makeRed     /\v \zs\d+-\d+\ze /
-" PURPOSE: Highlight DRC violation number
-syntax match   makeRed     /\V| \v\zs[1-9]\d*\ze +\V|/
+syntax keyword makeNext  NEXT
+syntax keyword makeNext  IN_P
+syntax keyword makeNext  REDO
+syntax keyword makeNext  WAIVE
+syntax keyword makeNext  MATT
+syntax keyword makeNext  MIKE
+highlight link makeNext  CursorLineNr
+
+syntax keyword makeFail  FAIL
+syntax keyword makeFail  NO
+syntax match   makeFail  /\v%>187c [^ ]*\zsX\ze[^ ]* /
+syntax match   makeFail  /\v \zs\d+-\d+\ze /
+" PURPOSE: Highlight DRC violation number above zero
+syntax match   makeFail  /\V| \v\zs[1-9]\d*\ze +\V|/
 " PURPOSE: Highlight IRDrop above 100mV
-syntax match   makeRed     /\v \zs[1-9]\d{2,}mV\ze /
-highlight link makeRed     Error
+syntax match   makeFail  /\v \zs[1-9]\d{2,}mV\ze /
+highlight link makeFail  Error
 
-syntax keyword makePink    TODO
-highlight link makePink    DiffChange
-
-syntax match   makeBlock   /\V{{{1 \v\zs[^ ]+/
-highlight link makeBlock   Identifier
-
-syntax keyword makeBlue    HERE
-highlight link makeBlue    MatchParen
-
-syntax keyword makeGreen   PASSW
-syntax keyword makeGreen   37EISS
-syntax keyword makeGreen   DEFISS
-syntax match   makeGreen   /\v.*YES\ze /
-syntax keyword makeGreen   DONE
-syntax keyword makeGreen   PASS
-highlight link makeGreen   Debug
+syntax keyword makePink  TODO
+highlight link makePink  DiffChange
 
 "syntax match columnSep     /\v[|+]/
 "highlight link columnSep   Todo
-
-set cc=
 
 let b:current_syntax = "dashboard"
