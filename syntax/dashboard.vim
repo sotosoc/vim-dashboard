@@ -28,6 +28,7 @@ syntax match   makeRed     /\v \zs[1-9]\d{2,}mV\ze /
 highlight link makeRed     Error
 
 syntax keyword makePink    TODO
+syntax keyword makePink    NEXT
 highlight link makePink    DiffChange
 
 syntax match   makeBlock   /\V{{{1 \v\zs[^ ]+/
