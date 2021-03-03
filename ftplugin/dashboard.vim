@@ -13,3 +13,7 @@ set cc=
 nnoremap ,d A !!datekgJ
 nnoremap ,f 0/\v(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/
 nnoremap ,u 0/\v(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/d$A!!datekgJ
+
+ab -> →
+ab OK ✓
+ab <- ←
