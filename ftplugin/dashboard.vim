@@ -17,3 +17,4 @@ nnoremap ,u 0/\v(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat)/d$A!!datekgJ
 ab -> →
 ab OK ✓
 ab <- ←
+ab :: ∷
