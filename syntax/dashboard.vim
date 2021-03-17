@@ -11,8 +11,8 @@ syntax keyword makeDone  PASS
 syntax match   makeDone  /\v^ *✓ \zs.*$/
 highlight link makeDone  MoreMsg
 
-syntax match   makePrev  /\v^ *← \zs.*$/
-highlight link makePrev  DiffDelete
+syntax match   dateHeader  /\v^ *∷ \zs.*$/
+highlight link dateHeader  DiffDelete
 
 syntax keyword makeNext  NEXT
 syntax keyword makeNext  IN_P
