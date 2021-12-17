@@ -19,3 +19,4 @@ ab OK ✓
 ab XX ✗
 ab <- ←
 ab :: ∷
+ab [] □
