@@ -12,7 +12,7 @@ syntax match   makeDone  /\v^ *✓ \zs.*$/
 highlight link makeDone  MoreMsg
 
 syntax match   dateHeader  /\v^ *∷ \zs.*$/
-highlight link dateHeader  DiffDelete
+highlight link dateHeader  CursorLineNr
 
 syntax keyword makeNext  NEXT
 syntax keyword makeNext  IN_P
